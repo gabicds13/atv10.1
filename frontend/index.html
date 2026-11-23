@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Livraria | Exercício 10.1</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header><div class="wrap"><span class="eyebrow">ENGENHARIA DE SOFTWARE · LAB 10</span><h1>📚 Livraria Online</h1><p>Catálogo persistido em Azure Cosmos DB for MongoDB</p></div></header>
+  <main class="wrap">
+    <section class="card settings">
+      <label for="apiUrl">Endereço do back-end (API)</label>
+      <div class="inline"><input type="url" id="apiUrl" placeholder="http://localhost:5000" aria-label="Endereço da API"><button id="connectBtn" type="button">Conectar</button></div>
+      <small>Se o front-end e o back-end estiverem no mesmo App Service, a URL será preenchida automaticamente. Em hospedagens separadas, informe a URL pública do back-end.</small>
+    </section>
+    <section class="card"><div class="heading"><h2>Livros disponíveis</h2><button id="refreshBtn" type="button" class="secondary">Atualizar</button></div><p id="status" role="status">Conectando...</p><div id="catalogo" class="grid"></div></section>
+    <section class="card"><h2>Cadastrar livro</h2><form id="livroForm"><div class="formgrid"><label>Título<input name="titulo" required maxlength="120" placeholder="Título do livro"></label><label>Autor<input name="autor" required maxlength="120" placeholder="Nome do autor"></label><label>Preço (R$)<input name="preco" required type="number" min="0" step="0.01" placeholder="29.90"></label></div><button type="submit">Adicionar ao catálogo</button></form></section>
+  </main>
+  <footer>Exercício 10.1 · Cliente-servidor · Cosmos DB for MongoDB · Dados persistentes</footer>
+  <script src="script.js"></script>
+</body>
+</html>
